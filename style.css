@@ -4,19 +4,47 @@ h1, h2, h3, h4, h5, h6, p, body{
     margin: 0;
 }
 
+ul{
+    padding: 0;
+    margin: 0;
+}
+
 .cover{
-    width: 100vw;
+    width: 85vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+}
+
+.tpbg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btmbg-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.tpbg-imgm{
+    display: none;
+}
+
+.btmbg-imgm{
+    display: none;
 }
 
 .container{
     display: flex;
     flex-direction: column;
     gap: 100px;
-    width: 65%;
+    width: 80%;
     height: 80%;
     font-family: 'League Spartan', sans-serif;
 }
@@ -66,7 +94,8 @@ h1, h2, h3, h4, h5, h6, p, body{
     background-color: hsl(300, 24%, 96%);
     border-radius: 10px;
     font-size: 16px;
-    width: 350px;
+    width: 400px;
+    box-sizing: border-box;
 }
 
 .flx-itm{
@@ -143,4 +172,90 @@ h1, h2, h3, h4, h5, h6, p, body{
 }
 .fntwt-700{
     font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+    .rev-box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btm-box{
+        flex-direction: column;
+    }
+    .top-box{
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    .container{
+        width: unset;
+        height: unset;
+        padding: unset;
+        gap: 50px;
+    }
+    .cover{
+        width: unset;
+        height: unset;
+        padding: 80px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tpbg-img{
+        display: none;
+    }
+    
+    .btmbg-img{
+        display: none;
+    }
+
+    .rbx{
+        width: 100%;
+    }
+    .flx-itm{
+        display: flex;
+        gap: unset;
+    }
+
+    .flx-itm{
+        width: 100%;
+    }
+
+    .grditm-c{
+        width: 100%;
+    }
+
+    .head{
+        font-size: 40px;   
+    }
+
+    .tbbx2{
+        width: 100%;
+    }
+    
+    .btm-box>div:nth-child(2){
+        margin-top: unset;
+    }
+
+    .btm-box>div:nth-child(3){
+        margin-top: unset;
+    }
+    
+    .tpbg-imgm{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .btmbg-imgm{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
