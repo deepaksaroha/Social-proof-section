@@ -4,20 +4,23 @@ h1, h2, h3, h4, h5, h6, p, body{
     margin: 0;
 }
 
+body{
+    background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, right bottom;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: auto;
+}
+
 ul{
     padding: 0;
     margin: 0;
 }
 
 .cover{
-    width: 85vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
-    position: relative;
-    background-color: white;
 }
 
 .tpbg-img{
@@ -44,9 +47,11 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 100px;
-    width: 80%;
     height: 80%;
     font-family: 'League Spartan', sans-serif;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .top-box{
@@ -175,6 +180,12 @@ ul{
 }
 
 @media screen and (max-width: 375px) {
+
+    body{
+        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        width: 100%;
+    }
+
     .rev-box{
         flex-direction: column;
         justify-content: center;
